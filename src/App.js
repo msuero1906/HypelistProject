@@ -1,20 +1,42 @@
 import "./styles.css";
 //Write array below
 export default function App() {
-  let names = ["Omari","Melody","Keturah","Aldo","Reginea","Amori","Laurent","Ye","Matt","Judy","Sami","Maxwell","Groana","Aland","Jean","Lorena"];
+  let people = [
+    { FirstName: "Omari", LastName: "" },
+    "Melody",
+    "Keturah",
+    "Aldo",
+    "Reginea",
+    "Amori",
+    "Laurent",
+    "Ye",
+    "Matt",
+    "Judy",
+    "Sami",
+    "Maxwell",
+    "Groana",
+    "Aland",
+    "Jean",
+    "Lorena"
+  ];
 
   return (
     <div className="App">
       <table>
-       <tr> <th>First Name</th> </tr>
-        { names.map(function(name){
-          return(<td>{name}</td>)
-        })} 
         <tr>
-          <td>{names[0]}</td>
+          {" "}
+          <th>First Name</th>{" "}
         </tr>
-        
-       
+        {people.map(function (person) {
+          return (
+            <tr>
+              <td>{person.FirstName}</td>
+            </tr>
+          );
+        })}
+        <tr>
+          <td></td>
+        </tr>
       </table>
     </div>
   );
