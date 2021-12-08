@@ -6,14 +6,14 @@ export default function App() {
   return (
     <div className="App">
       <table>
-        <th>First Name</th>
+       <tr> <th>First Name</th> </tr>
         { names.map(function(name){
-          return()
-        })
+          return(<td>{name}</td>)
+        })} 
         <tr>
           <td>{names[0]}</td>
         </tr>
-        }
+        
        
       </table>
     </div>
